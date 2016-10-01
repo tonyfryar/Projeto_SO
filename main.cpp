@@ -26,6 +26,7 @@ int main(int argc, const char* argv[]){
    BlackLib::BlackGPIO  button1(BlackLib::GPIO_115,BlackLib::input, BlackLib::SecureMode);
 
    cout << "### Inicializando o QUIZ ###" << endl;
+   cout << "Pressione o botão para começar!" << endl;
 
    //Leitura da entrada analógica AIN1
    int contador = 0;
@@ -52,7 +53,7 @@ int main(int argc, const char* argv[]){
           ledR.setValue(BlackLib::low);
           ledG.setValue(BlackLib::low);
           ledB.setValue(BlackLib::low);
-          cout<<"Para pular para próxima pergunta gire o potenciometro"<<endl;
+          cout<<"Para pular para a próxima pergunta gire o potenciômetro e em seguida pressione o botão."<<endl;
           contador++;
         }
         else{
@@ -65,17 +66,17 @@ int main(int argc, const char* argv[]){
           ledG.setValue(BlackLib::low);
           ledB.setValue(BlackLib::low);
           acertou = false;
-          if(contador < 3 ){
-            cout<<"Você precisa estudar um pouco mais iniciante\n\nATÉ BREVE!!"<<endl;
+          if(contador < 2){
+            cout<<"Você precisa estudar um pouco mais...\n\nATÉ BREVE!!"<<endl;
           }
-          else if(contador < 7){
-            cout<<"Dá pra estudar mais um pouco amigão\n\nATÉ BREVE!!"<<endl;
+          else if(contador < 4){
+            cout<<"Quase lá... Estude um pouco mais.\n\nATÉ BREVE!!"<<endl;
           }
-          else if(contador < 10){
-            cout<<"Parabéns você está estudando bem, continue assim!!"<<endl;
+          else if(contador < 6){
+            cout<<"Você foi muito bem! Continue assim!!"<<endl;
           }
           else{
-            cout<<"Parabéns, você está no nível Ivanovitch de aprendizado"<<endl;
+            cout<<"Parabéns! Você está no nível Ivanovitch de aprendizado"<<endl;
           }
         }
      }
@@ -93,7 +94,7 @@ int main(int argc, const char* argv[]){
           ledR.setValue(BlackLib::low);
           ledG.setValue(BlackLib::low);
           ledB.setValue(BlackLib::low);
-          cout<<"Para pular para próxima pergunta gire o potenciometro"<<endl;
+          cout<<"Para pular para a próxima pergunta gire o potenciômetro e em seguida pressione o botão."<<endl;
           contador++;
         }
         else{
@@ -106,17 +107,17 @@ int main(int argc, const char* argv[]){
           ledG.setValue(BlackLib::low);
           ledB.setValue(BlackLib::low);
           acertou = false;
-          if(contador < 3 ){
-            cout<<"Você precisa estudar um pouco mais iniciante\n\nATÉ BREVE!!"<<endl;
+          if(contador < 2){
+            cout<<"Você precisa estudar um pouco mais...\n\nATÉ BREVE!!"<<endl;
           }
-          else if(contador < 7){
-            cout<<"Dá pra estudar mais um pouco amigão\n\nATÉ BREVE!!"<<endl;
+          else if(contador < 4){
+            cout<<"Quase lá... Estude um pouco mais.\n\nATÉ BREVE!!"<<endl;
           }
-          else if(contador < 10){
-            cout<<"Parabéns você está estudando bem, continue assim!!"<<endl;
+          else if(contador < 6){
+            cout<<"Você foi muito bem! Continue assim!!"<<endl;
           }
           else{
-            cout<<"Parabéns, você está no nível Ivanovitch de aprendizado"<<endl;
+            cout<<"Parabéns! Você está no nível Ivanovitch de aprendizado"<<endl;
           }
         }
       }
@@ -134,7 +135,7 @@ int main(int argc, const char* argv[]){
           ledR.setValue(BlackLib::low);
           ledG.setValue(BlackLib::low);
           ledB.setValue(BlackLib::low);
-          cout<<"Para pular para próxima pergunta gire o potenciometro"<<endl;
+          cout<<"Para pular para a próxima pergunta gire o potenciômetro e em seguida pressione o botão."<<endl;
           contador++;
         }
         else{
@@ -147,17 +148,17 @@ int main(int argc, const char* argv[]){
           ledG.setValue(BlackLib::low);
           ledB.setValue(BlackLib::low);
           acertou = false;
-          if(contador < 3 ){
-            cout<<"Você precisa estudar um pouco mais iniciante\n\nATÉ BREVE!!"<<endl;
+          if(contador < 2){
+            cout<<"Você precisa estudar um pouco mais...\n\nATÉ BREVE!!"<<endl;
           }
-          else if(contador < 7){
-            cout<<"Dá pra estudar mais um pouco amigão\n\nATÉ BREVE!!"<<endl;
+          else if(contador < 4){
+            cout<<"Quase lá... Estude um pouco mais.\n\nATÉ BREVE!!"<<endl;
           }
-          else if(contador < 10){
-            cout<<"Parabéns você está estudando bem, continue assim!!"<<endl;
+          else if(contador < 6){
+            cout<<"Você foi muito bem! Continue assim!!"<<endl;
           }
           else{
-            cout<<"Parabéns, você está no nível Ivanovitch de aprendizado"<<endl;
+            cout<<"Parabéns! Você está no nível Ivanovitch de aprendizado"<<endl;
           }
         }
      }
@@ -175,7 +176,7 @@ int main(int argc, const char* argv[]){
           ledR.setValue(BlackLib::low);
           ledG.setValue(BlackLib::low);
           ledB.setValue(BlackLib::low);
-          cout<<"Para pular para próxima pergunta gire o potenciometro"<<endl;
+          cout<<"Para pular para a próxima pergunta gire o potenciômetro e em seguida pressione o botão."<<endl;
           contador++;
         }
         else{
@@ -203,7 +204,7 @@ int main(int argc, const char* argv[]){
           ledR.setValue(BlackLib::low);
           ledG.setValue(BlackLib::low);
           ledB.setValue(BlackLib::low);
-          cout<<"Para pular para próxima pergunta gire o potenciometro"<<endl;
+          cout<<"Para pular para a próxima pergunta gire o potenciômetro e em seguida pressione o botão."<<endl;
           contador++;
         }
         else{
@@ -216,17 +217,17 @@ int main(int argc, const char* argv[]){
           ledG.setValue(BlackLib::low);
           ledB.setValue(BlackLib::low);
           acertou = false;
-          if(contador < 3 ){
-            cout<<"Você precisa estudar um pouco mais iniciante\n\nATÉ BREVE!!"<<endl;
+          if(contador < 2){
+            cout<<"Você precisa estudar um pouco mais...\n\nATÉ BREVE!!"<<endl;
           }
-          else if(contador < 7){
-            cout<<"Dá pra estudar mais um pouco amigão\n\nATÉ BREVE!!"<<endl;
+          else if(contador < 4){
+            cout<<"Quase lá... Estude um pouco mais.\n\nATÉ BREVE!!"<<endl;
           }
-          else if(contador < 10){
-            cout<<"Parabéns você está estudando bem, continue assim!!"<<endl;
+          else if(contador < 6){
+            cout<<"Você foi muito bem! Continue assim!!"<<endl;
           }
           else{
-            cout<<"Parabéns, você está no nível Ivanovitch de aprendizado"<<endl;
+            cout<<"Parabéns! Você está no nível Ivanovitch de aprendizado"<<endl;
           }
         }
      }
@@ -244,7 +245,7 @@ int main(int argc, const char* argv[]){
           ledR.setValue(BlackLib::low);
           ledG.setValue(BlackLib::low);
           ledB.setValue(BlackLib::low);
-          cout<<"Para pular para próxima pergunta gire o potenciometro"<<endl;
+          cout<<"Para pular para a próxima pergunta gire o potenciômetro e em seguida pressione o botão."<<endl;
           contador++;
         }
         else{
@@ -257,17 +258,17 @@ int main(int argc, const char* argv[]){
           ledG.setValue(BlackLib::low);
           ledB.setValue(BlackLib::low);
           acertou = false;
-          if(contador < 3 ){
-            cout<<"Você precisa estudar um pouco mais iniciante\n\nATÉ BREVE!!"<<endl;
+          if(contador < 2){
+            cout<<"Você precisa estudar um pouco mais...\n\nATÉ BREVE!!"<<endl;
           }
-          else if(contador < 7){
-            cout<<"Dá pra estudar mais um pouco amigão\n\nATÉ BREVE!!"<<endl;
+          else if(contador < 4){
+            cout<<"Quase lá... Estude um pouco mais.\n\nATÉ BREVE!!"<<endl;
           }
-          else if(contador < 10){
-            cout<<"Parabéns você está estudando bem, continue assim!!"<<endl;
+          else if(contador < 6){
+            cout<<"Você foi muito bem! Continue assim!!"<<endl;
           }
           else{
-            cout<<"Parabéns, você está no nível Ivanovitch de aprendizado"<<endl;
+            cout<<"Parabéns! Você está no nível Ivanovitch de aprendizado"<<endl;
           }
         }
      }
@@ -285,7 +286,7 @@ int main(int argc, const char* argv[]){
           ledR.setValue(BlackLib::low);
           ledG.setValue(BlackLib::low);
           ledB.setValue(BlackLib::low);
-          cout<<"Para pular para próxima pergunta gire o potenciometro"<<endl;
+          cout<<"Para pular para a próxima pergunta gire o potenciômetro e em seguida pressione o botão."<<endl;
           contador++;
         }
         else{
@@ -298,17 +299,17 @@ int main(int argc, const char* argv[]){
           ledG.setValue(BlackLib::low);
           ledB.setValue(BlackLib::low);
           acertou = false;
-          if(contador < 3 ){
-            cout<<"Você precisa estudar um pouco mais iniciante\n\nATÉ BREVE!!"<<endl;
+          if(contador < 2){
+            cout<<"Você precisa estudar um pouco mais...\n\nATÉ BREVE!!"<<endl;
           }
-          else if(contador < 7){
-            cout<<"Dá pra estudar mais um pouco amigão\n\nATÉ BREVE!!"<<endl;
+          else if(contador < 4){
+            cout<<"Quase lá... Estude um pouco mais.\n\nATÉ BREVE!!"<<endl;
           }
-          else if(contador < 10){
-            cout<<"Parabéns você está estudando bem, continue assim!!"<<endl;
+          else if(contador < 6){
+            cout<<"Você foi muito bem! Continue assim!!"<<endl;
           }
           else{
-            cout<<"Parabéns, você está no nível Ivanovitch de aprendizado"<<endl;
+            cout<<"Parabéns! Você está no nível Ivanovitch de aprendizado"<<endl;
           }
         }
      }
@@ -326,7 +327,7 @@ int main(int argc, const char* argv[]){
           ledR.setValue(BlackLib::low);
           ledG.setValue(BlackLib::low);
           ledB.setValue(BlackLib::low);
-          cout<<"Para pular para próxima pergunta gire o potenciometro"<<endl;
+          cout<<"Para pular para a próxima pergunta gire o potenciômetro e em seguida pressione o botão."<<endl;
           contador++;
         }
         else{
@@ -339,17 +340,17 @@ int main(int argc, const char* argv[]){
           ledG.setValue(BlackLib::low);
           ledB.setValue(BlackLib::low);
           acertou = false;
-          if(contador < 3 ){
-            cout<<"Você precisa estudar um pouco mais iniciante\n\nATÉ BREVE!!"<<endl;
+          if(contador < 2){
+            cout<<"Você precisa estudar um pouco mais...\n\nATÉ BREVE!!"<<endl;
           }
-          else if(contador < 7){
-            cout<<"Dá pra estudar mais um pouco amigão\n\nATÉ BREVE!!"<<endl;
+          else if(contador < 4){
+            cout<<"Quase lá... Estude um pouco mais.\n\nATÉ BREVE!!"<<endl;
           }
-          else if(contador < 10){
-            cout<<"Parabéns você está estudando bem, continue assim!!"<<endl;
+          else if(contador < 6){
+            cout<<"Você foi muito bem! Continue assim!!"<<endl;
           }
           else{
-            cout<<"Parabéns, você está no nível Ivanovitch de aprendizado"<<endl;
+            cout<<"Parabéns! Você está no nível Ivanovitch de aprendizado"<<endl;
           }
         }
      }
@@ -367,7 +368,7 @@ int main(int argc, const char* argv[]){
           ledR.setValue(BlackLib::low);
           ledG.setValue(BlackLib::low);
           ledB.setValue(BlackLib::low);
-          cout<<"Para pular para próxima pergunta gire o potenciometro"<<endl;
+          cout<<"Para pular para a próxima pergunta gire o potenciômetro e em seguida pressione o botão."<<endl;
           contador++;
         }
         else{
@@ -380,17 +381,17 @@ int main(int argc, const char* argv[]){
           ledG.setValue(BlackLib::low);
           ledB.setValue(BlackLib::low);
           acertou = false;
-          if(contador < 3 ){
-            cout<<"Você precisa estudar um pouco mais iniciante\n\nATÉ BREVE!!"<<endl;
+          if(contador < 2){
+            cout<<"Você precisa estudar um pouco mais...\n\nATÉ BREVE!!"<<endl;
           }
-          else if(contador < 7){
-            cout<<"Dá pra estudar mais um pouco amigão\n\nATÉ BREVE!!"<<endl;
+          else if(contador < 4){
+            cout<<"Quase lá... Estude um pouco mais.\n\nATÉ BREVE!!"<<endl;
           }
-          else if(contador < 10){
-            cout<<"Parabéns você está estudando bem, continue assim!!"<<endl;
+          else if(contador < 6){
+            cout<<"Você foi muito bem! Continue assim!!"<<endl;
           }
           else{
-            cout<<"Parabéns, você está no nível Ivanovitch de aprendizado"<<endl;
+            cout<<"Parabéns! Você está no nível Ivanovitch de aprendizado"<<endl;
           }
         }
      }
@@ -408,7 +409,7 @@ int main(int argc, const char* argv[]){
           ledR.setValue(BlackLib::low);
           ledG.setValue(BlackLib::low);
           ledB.setValue(BlackLib::low);
-          cout<<"Para pular para próxima pergunta gire o potenciometro"<<endl;
+          cout<<"Para pular para a próxima pergunta gire o potenciômetro e em seguida pressione o botão."<<endl;
           contador++;
         }
         else{
@@ -421,17 +422,17 @@ int main(int argc, const char* argv[]){
           ledG.setValue(BlackLib::low);
           ledB.setValue(BlackLib::low);
           acertou = false;
-          if(contador < 3 ){
-            cout<<"Você precisa estudar um pouco mais iniciante ATÉ BREVE!!"<<endl;
+          if(contador < 2){
+            cout<<"Você precisa estudar um pouco mais...\n\nATÉ BREVE!!"<<endl;
           }
-          else if(contador < 7){
-            cout<<"Dá pra estudar mais um pouco amigão\n\nATÉ BREVE!!"<<endl;
+          else if(contador < 4){
+            cout<<"Quase lá... Estude um pouco mais.\n\nATÉ BREVE!!"<<endl;
           }
-          else if(contador < 10){
-            cout<<"Parabéns você está estudando bem, continue assim!!"<<endl;
+          else if(contador < 6){
+            cout<<"Você foi muito bem! Continue assim!!"<<endl;
           }
           else{
-            cout<<"Parabéns, você está no nível Ivanovitch de aprendizado"<<endl;
+            cout<<"Parabéns! Você está no nível Ivanovitch de aprendizado"<<endl;
           }
         }
      }
