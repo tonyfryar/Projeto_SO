@@ -18,29 +18,32 @@ int readAnalog(int number){
    fs.close();
    return number;
 }
-//FALTA IMPLEMENTAR O BOTÃO... PARA ISSO É PRECISO CRIAR UMA VARIAVEL INTEIRA, DEPOIS DENTRO DO WHILE COLOCAR OUTRO WHILE E CHAMAR
-//A FUNÇÃO DO BOTÃO PARA QUE O VALOR DA VARIÁVEL POSSA MUDAR PRA 1 E ASSIM PODER ENTRAR NAS PERGUNTAS...OU SEJA, 2 WHILE(O1 SEMPRE TRUE
-//E O SEGUNDO FALSE ONDE ESSE 2º SÓ SE TORNARÁ TRUE SE O BOTÃO FOR APERTADO
+
 int main(int argc, const char* argv[]){
    BlackLib::BlackGPIO   ledR(BlackLib::GPIO_60,BlackLib::output, BlackLib::SecureMode);
    BlackLib::BlackGPIO   ledG(BlackLib::GPIO_50,BlackLib::output, BlackLib::SecureMode);
    BlackLib::BlackGPIO   ledB(BlackLib::GPIO_51,BlackLib::output, BlackLib::SecureMode);
+   BlackLib::BlackGPIO  button1(BlackLib::GPIO_115,BlackLib::input, BlackLib::SecureMode);
 
    cout << "### Inicializando o QUIZ ###" << endl;
 
    //Leitura da entrada analógica AIN1
-   int valor = readAnalog(1),contador = 0;
+   int contador = 0;
    bool acertou = true;
    //cout << "O valor lido foi " << valor << " [0 a 4095]." << endl;
    //cout << "O valor corresponde a " << (valor*1.8)/4096 << "Volts" << endl;
-   float resultado = (valor*1.8)/4096;
+   
    while(acertou){
-     if (0 < resultado && resultado < 0.0039){
-        cout << "Qual programa é reponsável por inicializar o sistema operacional ao ligar o computador?" << endl;
-        string resposta;
-        getline(cin,resposta);
 
-        if (resposta.compare("boatloader") == 0){
+      while(button1.getNumericValue()){
+      	int valor = readAnalog(1);
+   		float resultado = (valor*1.8)/4096;   	 
+        if (0 < resultado && resultado < 0.0039){
+           cout << "Qual programa é reponsável por inicializar o sistema operacional ao ligar o computador?" << endl;
+           string resposta;
+           getline(cin,resposta);
+
+        if (resposta.compare("bootloader") == 0){
            //chamar função LED verde
           ledR.setValue(BlackLib::low);
           ledG.setValue(BlackLib::high);
@@ -63,7 +66,7 @@ int main(int argc, const char* argv[]){
           ledB.setValue(BlackLib::low);
           acertou = false;
           if(contador < 3 ){
-            cout<"Você precisa estudar um pouco mais iniciante\n\nATÉ BREVE!!"<<endl;
+            cout<<"Você precisa estudar um pouco mais iniciante\n\nATÉ BREVE!!"<<endl;
           }
           else if(contador < 7){
             cout<<"Dá pra estudar mais um pouco amigão\n\nATÉ BREVE!!"<<endl;
@@ -81,7 +84,7 @@ int main(int argc, const char* argv[]){
         string resposta;
         getline(cin,resposta);
 
-        if (resposta.compare("Microkernel") == 0){
+        if(resposta.compare("Microkernel") == 0){
            //chamar função LED verde
           ledR.setValue(BlackLib::low);
           ledG.setValue(BlackLib::high);
@@ -104,7 +107,7 @@ int main(int argc, const char* argv[]){
           ledB.setValue(BlackLib::low);
           acertou = false;
           if(contador < 3 ){
-            cout<"Você precisa estudar um pouco mais iniciante\n\nATÉ BREVE!!"<<endl;
+            cout<<"Você precisa estudar um pouco mais iniciante\n\nATÉ BREVE!!"<<endl;
           }
           else if(contador < 7){
             cout<<"Dá pra estudar mais um pouco amigão\n\nATÉ BREVE!!"<<endl;
@@ -145,7 +148,7 @@ int main(int argc, const char* argv[]){
           ledB.setValue(BlackLib::low);
           acertou = false;
           if(contador < 3 ){
-            cout<"Você precisa estudar um pouco mais iniciante\n\nATÉ BREVE!!"<<endl;
+            cout<<"Você precisa estudar um pouco mais iniciante\n\nATÉ BREVE!!"<<endl;
           }
           else if(contador < 7){
             cout<<"Dá pra estudar mais um pouco amigão\n\nATÉ BREVE!!"<<endl;
@@ -214,7 +217,7 @@ int main(int argc, const char* argv[]){
           ledB.setValue(BlackLib::low);
           acertou = false;
           if(contador < 3 ){
-            cout<"Você precisa estudar um pouco mais iniciante\n\nATÉ BREVE!!"<<endl;
+            cout<<"Você precisa estudar um pouco mais iniciante\n\nATÉ BREVE!!"<<endl;
           }
           else if(contador < 7){
             cout<<"Dá pra estudar mais um pouco amigão\n\nATÉ BREVE!!"<<endl;
@@ -255,7 +258,7 @@ int main(int argc, const char* argv[]){
           ledB.setValue(BlackLib::low);
           acertou = false;
           if(contador < 3 ){
-            cout<"Você precisa estudar um pouco mais iniciante\n\nATÉ BREVE!!"<<endl;
+            cout<<"Você precisa estudar um pouco mais iniciante\n\nATÉ BREVE!!"<<endl;
           }
           else if(contador < 7){
             cout<<"Dá pra estudar mais um pouco amigão\n\nATÉ BREVE!!"<<endl;
@@ -296,7 +299,7 @@ int main(int argc, const char* argv[]){
           ledB.setValue(BlackLib::low);
           acertou = false;
           if(contador < 3 ){
-            cout<"Você precisa estudar um pouco mais iniciante\n\nATÉ BREVE!!"<<endl;
+            cout<<"Você precisa estudar um pouco mais iniciante\n\nATÉ BREVE!!"<<endl;
           }
           else if(contador < 7){
             cout<<"Dá pra estudar mais um pouco amigão\n\nATÉ BREVE!!"<<endl;
@@ -337,7 +340,7 @@ int main(int argc, const char* argv[]){
           ledB.setValue(BlackLib::low);
           acertou = false;
           if(contador < 3 ){
-            cout<"Você precisa estudar um pouco mais iniciante\n\nATÉ BREVE!!"<<endl;
+            cout<<"Você precisa estudar um pouco mais iniciante\n\nATÉ BREVE!!"<<endl;
           }
           else if(contador < 7){
             cout<<"Dá pra estudar mais um pouco amigão\n\nATÉ BREVE!!"<<endl;
@@ -378,7 +381,7 @@ int main(int argc, const char* argv[]){
           ledB.setValue(BlackLib::low);
           acertou = false;
           if(contador < 3 ){
-            cout<"Você precisa estudar um pouco mais iniciante\n\nATÉ BREVE!!"<<endl;
+            cout<<"Você precisa estudar um pouco mais iniciante\n\nATÉ BREVE!!"<<endl;
           }
           else if(contador < 7){
             cout<<"Dá pra estudar mais um pouco amigão\n\nATÉ BREVE!!"<<endl;
@@ -419,7 +422,7 @@ int main(int argc, const char* argv[]){
           ledB.setValue(BlackLib::low);
           acertou = false;
           if(contador < 3 ){
-            cout<"Você precisa estudar um pouco mais iniciante\n\nATÉ BREVE!!"<<endl;
+            cout<<"Você precisa estudar um pouco mais iniciante ATÉ BREVE!!"<<endl;
           }
           else if(contador < 7){
             cout<<"Dá pra estudar mais um pouco amigão\n\nATÉ BREVE!!"<<endl;
@@ -432,6 +435,7 @@ int main(int argc, const char* argv[]){
           }
         }
      }
-  }//Fecha while
+  }
+}
    return 0;
 }
